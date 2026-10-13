@@ -3,22 +3,34 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 查理怎麼說
+subtitle: '技術、生活、心得與身心靈分享'
+description: '一個記錄技術學習、生活日常、心得感想、身心靈探索與自我成長的個人空間。'
 keywords:
-author: John Doe
+  - 查理怎麼說
+  - 技術
+  - 生活
+  - 日記
+  - 心得
+  - 思考
+  - 自我成長
+  - 身心靈
+author: Charley Fu
+# language: zh-TW
 language: en
-timezone: ''
+timezone: 'Asia/Taipei'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: https://iachievedream.github.io/blog
+# root: /
+root: /blog/
+# permalink: posts/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -29,6 +41,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - markmap/**/*.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -42,7 +55,7 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
-future: true
+future: false
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
@@ -71,7 +84,7 @@ tag_map:
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+meta_generator: false
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -80,7 +93,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -96,9 +109,26 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/iachievedream/blog.git
+  branch: gh-pages
+
+sitemap:
+  path: sitemap.xml
+
+# Archives
+archive_generator:
+  per_page: 0
+  yearly: false
+  monthly: false
+
+# 訂閱、內容分發、讀者回訪與網站生態
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
