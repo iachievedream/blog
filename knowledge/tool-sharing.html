@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/cat-icon.png">
+  <link rel="icon" href="/blog/img/cat-icon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Charley Fu">
+  <meta name="keywords" content="查理怎麼說,技術,生活,日記,心得,思考,自我成長,身心靈">
+  
+    <meta name="description" content="mac 使用 brew12345678where brew# 安裝 Homebrew&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;# 設定環境變數(echo; echo &#x27;eval &quot;$(&#x2F;opt&#x2F;homebrew&#x2F;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="工具分享">
+<meta property="og:url" content="https://iachievedream.github.io/blog/knowledge/tool-sharing">
+<meta property="og:site_name" content="查理怎麼說">
+<meta property="og:description" content="mac 使用 brew12345678where brew# 安裝 Homebrew&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;# 設定環境變數(echo; echo &#x27;eval &quot;$(&#x2F;opt&#x2F;homebrew&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-19T16:00:00.000Z">
+<meta property="article:author" content="Charley Fu">
+<meta property="article:tag" content="tool">
+<meta property="article:tag" content="興趣">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>工具分享 - 查理怎麼說</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"iachievedream.github.io","root":"/blog/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+
+  
+<link rel="alternate" href="/blog/atom.xml" title="查理怎麼說" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>查理怎麼說</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於我</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/knowledge/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>專業知識</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/journal/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>日記分享</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                <span>更多</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/service-pricing/" target="_self">
+                    <i class="iconfont icon-link-fill"></i>
+                    <span>部落格報價</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/blog/thoughts/" target="_self">
+                    <i class="iconfont icon-tags-fill"></i>
+                    <span>自我想法</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/blog/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>關於我</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/blog/knowledge/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>專業知識</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/blog/journal/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>日記分享</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            
+            <div class="col-12 mobile-grid-group-header">
+              <i class="iconfont icon-link-fill"></i>
+              <span>更多</span>
+            </div>
+            
+              
+              
+              
+              <div class="col-4 mobile-grid-cell">
+                <a href="/blog/service-pricing/" target="_self">
+                  <div class="mobile-grid-item">
+                    <i class="iconfont icon-link-fill"></i>
+                    <span>部落格報價</span>
+                  </div>
+                </a>
+              </div>
+            
+              
+              
+              
+              <div class="col-4 mobile-grid-cell">
+                <a href="/blog/thoughts/" target="_self">
+                  <div class="mobile-grid-item">
+                    <i class="iconfont icon-tags-fill"></i>
+                    <span>自我想法</span>
+                  </div>
+                </a>
+              </div>
+            
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>Search</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="Light"
+               data-label-dark="Dark">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">Dark</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="工具分享"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <h2 id="mac-使用-brew"><a href="#mac-使用-brew" class="headerlink" title="mac 使用 brew"></a>mac 使用 brew</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">where</span> brew<br><span class="hljs-comment"># 安裝 Homebrew</span><br>/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br><br><span class="hljs-comment"># 設定環境變數</span><br>(<span class="hljs-built_in">echo</span>; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span>) &gt;&gt; /Users/fu/.zprofile<br><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(/opt/homebrew/bin/brew shellenv)</span>&quot;</span><br><span class="hljs-built_in">where</span> brew<br></code></pre></td></tr></table></figure>
+
+<h2 id="軟體安裝"><a href="#軟體安裝" class="headerlink" title="軟體安裝"></a>軟體安裝</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 更新</span><br>brew uninstall --cask herd<br><br><span class="hljs-comment">#                  安裝zip 截圖工具 視窗版面移動軟體 右上選單縮合功能 反轉滾動方向的工具</span><br>brew install --cask keka snipaste rectangle hiddenbar scroll-reverser<br><br><span class="hljs-comment">#                   呼叫器 終端機 日曆 剪貼簿管理器</span><br>brew install --cask raycast warp itsycal maccy<br><span class="hljs-comment"># defaults write com.mowglii.ItsycalApp AppleLanguages &#x27;(&quot;zh-Hans&quot;)&#x27;</span><br><br><span class="hljs-comment">#                    限制電池過充 狀態監控器 優化 解安裝的軟體</span><br>brew install --cask aldente stats onyx appcleaner<br><span class="hljs-comment">## defaults write com.titanium.OnyX AppleLanguages &#x27;(&quot;zh-Hans&quot;)&#x27;</span><br><br><span class="hljs-comment"># mac快捷鍵大抄  cheatsheet 已停止維護 # 按兩次⌘鍵並按住</span><br>brew install --cask keyclu<br><span class="hljs-comment"># 圖片上傳雲端</span><br>brew install --cask bigwig-club/brew/upic<br>brew install --cask picgo<br><span class="hljs-comment"># 瀏覽器</span><br>brew install --cask google-chrome brave-browser<br><br><span class="hljs-comment"># 免費 Mac 開機隨身碟製作工具</span><br>brew install --cask macusb<br>brew install wimlib<br></code></pre></td></tr></table></figure>
+
+<h2 id="開發工具"><a href="#開發工具" class="headerlink" title="開發工具"></a>開發工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># brew install --cask postman sourcetree sublime-text</span><br><span class="hljs-comment"># brew install --cask herd dbngin mysqlworkbench</span><br>brew install git gitfiend<br><br>brew update<br>brew install php composer<br><br><span class="hljs-built_in">which</span> php<br><span class="hljs-built_in">which</span> composer<br>php -v<br>composer --version<br><br><span class="hljs-comment">## git config --list</span><br>git config --global user.email <span class="hljs-string">&quot;user@user.com&quot;</span><br>git config --global user.name <span class="hljs-string">&quot;user&quot;</span><br><br>ssh-keygen -t rsa -C user@user.com<br><span class="hljs-built_in">cat</span> /Users/user/.ssh/id_rsa.pub<br><span class="hljs-comment"># git reset --hard HEAD    # 回復到最新提交版本</span><br><span class="hljs-comment"># git reset --hard HEAD~   # 等於 ~1 回復到上一個提交版本</span><br><br>brew install gh<br>gh auth login<br><br>brew install --cask visual-studio-code docker tableplus<br><br>brew install --cask orbstack<br><span class="hljs-comment"># Start</span><br>orb start k8s<br><span class="hljs-comment"># Stop </span><br>orb stop k8s<br><span class="hljs-comment"># Restart</span><br>orb restart k8s<br><span class="hljs-comment"># Delete</span><br>orb delete k8s<br><br><span class="hljs-comment"># docker orbstack 教學的指令差異</span><br><br><span class="hljs-comment"># 切換 Docker CLI 到 OrbStack Engine</span><br>docker context use orbstack<br><br><span class="hljs-comment"># 切回 Docker Desktop</span><br>docker context use desktop-linux<br><br><br>docker ps             <span class="hljs-comment"># 顯示在 OrbStack Engine 上的容器</span><br>docker run -d nginx   <span class="hljs-comment"># 在 OrbStack 啟動容器</span><br>docker compose up -d  <span class="hljs-comment"># 在 OrbStack 啟動 Compose 堆疊</span><br><span class="hljs-comment"># 不用改命令本身，只要切換 context，就可以無縫使用 OrbStack。</span><br><br><span class="hljs-comment"># 確認是否生效</span><br>docker context <span class="hljs-built_in">ls</span><br><br><span class="hljs-comment"># 一鍵清理整個系統</span><br>docker system prune -a --volumes<br><br>brew install --cask wireshark<br>brew install --cask little-snitch<br><span class="hljs-comment"># 跨平台無線傳檔</span><br>brew install --cask blip<br>===<br><br><span class="hljs-comment"># Oh My Zsh</span><br>brew install --cask iterm2 font-sauce-code-pro-nerd-font<br><br><span class="hljs-comment"># # 處理 Quit iTerm2?</span><br><span class="hljs-comment"># 打開 iTerm2，打開 Preferences（偏好設定）</span><br><span class="hljs-comment"># 點擊頂部的 General 標籤頁</span><br><span class="hljs-comment"># 找到 Closing 區塊</span><br><span class="hljs-comment"># 取消勾選 Confirm Quit iTerm2 </span><br><br><span class="hljs-built_in">which</span> zsh<br><span class="hljs-comment"># 升級 zsh</span><br>brew install zsh<br><span class="hljs-comment"># 只有 brew zsh 才需要</span><br><span class="hljs-built_in">sudo</span> sh -c <span class="hljs-string">&quot;echo <span class="hljs-subst">$(which zsh)</span> &gt;&gt; /etc/shells&quot;</span><br><span class="hljs-comment"># 設定預設 shell</span><br>chsh -s $(<span class="hljs-built_in">which</span> zsh)<br><span class="hljs-comment"># 安裝 Oh My Zsh</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span><br><br><br>brew install --cask openmtp<br>是 Mac 與 Android 之間傳輸檔案的最佳免費開源神器<br><br>brew install --cask caffeine<br><span class="hljs-comment"># 將 Markdown 格式的文件快速轉換為結構清晰、美觀的電子書與靜態網頁</span><br>brew install mdbook<br><br><span class="hljs-comment"># 为每一个 App 单独控制音量</span><br>brew install --cask finetune<br><br><span class="hljs-comment"># 知名跨平台開源時間追蹤器</span><br>brew install --cask activitywatch@beta<br><br><span class="hljs-built_in">sudo</span> xcodebuild -license accept<br>brew install rtk<br><br><br><span class="hljs-comment">## AI</span><br>brew install node<br>brew upgrade node<br><br><span class="hljs-comment"># 採用</span><br>用 fnm 安裝 LTS Node 可方便版本切換<br><br>brew uninstall node<br><span class="hljs-built_in">which</span> node<br>brew install fnm<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;eval &quot;$(fnm env --use-on-cd)&quot;&#x27;</span> &gt;&gt; ~/.zshrc<br><span class="hljs-built_in">source</span> ~/.zshrc<br><br>fnm --version<br><br>fnm install --lts<br>fnm use lts-latest<br><br>fnm default lts-latest<br><br>fnm current<br>node --version<br>npm --version<br><br>npm install -g @anthropic-ai/claude-code@latest<br>claude --version<br><span class="hljs-comment"># claude /logout</span><br>claude<br></code></pre></td></tr></table></figure>
+
+<h2 id="基本維護"><a href="#基本維護" class="headerlink" title="基本維護"></a>基本維護</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup<br>brew doctor<br><br><span class="hljs-comment"># [mole](https://github.com/tw93/Mole)</span><br>brew install tw93/tap/mole<br>mo clean --dry-run<br><br>儀表板<br>mo status<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="清理用不到的安裝檔"><a href="#清理用不到的安裝檔" class="headerlink" title="清理用不到的安裝檔"></a>清理用不到的安裝檔</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 模擬執行，不實際刪除任何檔案</span><br>brew cleanup --dry-run<br><span class="hljs-comment"># 確定沒問題時，再執行</span><br>brew cleanup --prune=all<br><span class="hljs-comment"># 清除掉快系統快取檔案</span><br><span class="hljs-built_in">rm</span> -rf <span class="hljs-string">&quot;<span class="hljs-subst">$(brew --cache)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+
+<!--
+## 同步與排除重複工具
+# 網頁工具
+
+## 圖像
+[miro](https://miro.com/)
+
+[figma](https://www.figma.com/)
+
+## 流程圖
+substack 教學
+
+## GTD
+儘管去做
+Getting Things Done
+-->
+
+<h2 id="obsidian"><a href="#obsidian" class="headerlink" title="obsidian"></a>obsidian</h2><p>雙向連結 (雙中括號)</p>
+<blockquote>
+<p>快速建立連結： 在編輯區輸入 [[，會自動彈出筆記清單供搜尋選擇，按下 Enter 即可完成關聯。</p>
+</blockquote>
+<p>brew install –cask obsidian</p>
+<p><a target="_blank" rel="noopener" href="https://obsidian.md/">obsidian</a></p>
+<p>瀏覽器第三方套件 文章截取工具（不需麻煩的手動複製<br><a target="_blank" rel="noopener" href="https://obsidian.md/clipper">obsidian web clipper</a></p>
+<h3 id="obsidian-web-clipper"><a href="#obsidian-web-clipper" class="headerlink" title="obsidian web clipper"></a>obsidian web clipper</h3><p>如何在 Android Firefox 使用這瀏覽器套件呢？</p>
+<p>使用時出現<br>This page cannot be clipped. Only http and https URLs are supported.</p>
+<blockquote>
+<p>因為它只能在使用在一般模式<br>而無法在閱讀模式下使用</p>
+</blockquote>
+<h2 id="google-關鍵字"><a href="#google-關鍵字" class="headerlink" title="google 關鍵字"></a>google 關鍵字</h2><p>『obsidian web clipper chrome 手機』<br>google 出現以下資訊<br>手機版 Chrome 無法直接安裝桌面端的 Obsidian Web Clipper<br>但你可以透過 Android 系統的 Firefox<br>或 iOS 系統的 Safari 達成相同的網頁剪輯需求</p>
+<p>手機替代方案與設定方式</p>
+<h3 id="Android-手機"><a href="#Android-手機" class="headerlink" title="Android 手機"></a>Android 手機</h3><p>下載並使用 Firefox 行動版，前往擴充功能商店安裝 Obsidian Web Clipper 即可直接使用</p>
+<h3 id="iPhone-iOS-手機"><a href="#iPhone-iOS-手機" class="headerlink" title="iPhone &#x2F; iOS 手機"></a>iPhone &#x2F; iOS 手機</h3><p>使用 Safari 瀏覽器，透過分享選單啟用並設定該擴充功能來剪藏網頁</p>
+<h3 id="備用替代方法"><a href="#備用替代方法" class="headerlink" title="備用替代方法"></a>備用替代方法</h3><p>若使用手機 Chrome，可直接利用瀏覽器的「分享」功能，將網頁連結傳送到手機內的 Obsidian App 建立新筆記</p>
+<p>後續再測試其他的手機瀏覽器</p>
+<h2 id="手機軟體"><a href="#手機軟體" class="headerlink" title="手機軟體"></a>手機軟體</h2><p>android</p>
+<ul>
+<li>drivesync<br>手機上的特定資料夾跟電腦同步<br>使用 Google Drive</li>
+</ul>
+<p>iPhone</p>
+<p>onedrive<br>icloud</p>
+<h3 id="同步資料夾"><a href="#同步資料夾" class="headerlink" title="同步資料夾"></a>同步資料夾</h3><p>raw (obsidian)<br>pictures<br>download<br>DCIM</p>
+<h2 id="mdbook"><a href="#mdbook" class="headerlink" title="mdbook"></a>mdbook</h2><p><a target="_blank" rel="noopener" href="https://jdev.tw/blog/6236">用Markdown寫書：使用mdBook超簡單</a></p>
+<p>mdBook&#x2F;my-book&#x2F;scripts&#x2F;sync_summary.py</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path<br><br><span class="hljs-comment"># SRC = Path(&quot;../src&quot;).resolve()</span><br><br><span class="hljs-comment"># 以目前腳本所在位置為基準</span><br>ROOT = Path(__file__).resolve().parent.parent<br>SRC = ROOT / <span class="hljs-string">&quot;src&quot;</span><br>SUMMARY = SRC / <span class="hljs-string">&quot;SUMMARY.md&quot;</span><br><br>summary = [<span class="hljs-string">&quot;# Summary&quot;</span>, <span class="hljs-string">&quot;&quot;</span>]<br><br>files = <span class="hljs-built_in">sorted</span>(<br>    SRC.rglob(<span class="hljs-string">&quot;*.md&quot;</span>),<br>    key=<span class="hljs-keyword">lambda</span> p: <span class="hljs-built_in">str</span>(p).lower()<br>)<br><br><span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> files:<br>    <span class="hljs-keyword">if</span> file.name == <span class="hljs-string">&quot;SUMMARY.md&quot;</span>:<br>        <span class="hljs-keyword">continue</span><br>    relative = file.relative_to(SRC).as_posix()<br>    title = file.stem.replace(<span class="hljs-string">&quot;_&quot;</span>, <span class="hljs-string">&quot; &quot;</span>)<br>    summary.append(<span class="hljs-string">f&quot;- [<span class="hljs-subst">&#123;title&#125;</span>](<span class="hljs-subst">&#123;relative&#125;</span>)&quot;</span>)<br>(SRC / <span class="hljs-string">&quot;SUMMARY.md&quot;</span>).write_text(<br>    <span class="hljs-string">&quot;\n&quot;</span>.join(summary),<br>    encoding=<span class="hljs-string">&quot;utf-8&quot;</span><br>)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;SUMMARY.md 已更新&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>Android LineageOS</p>
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
