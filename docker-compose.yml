@@ -1,0 +1,25 @@
+services:
+  hexo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hexo-node26:latest
+    container_name: hexo-blog
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - hexo_node_modules:/app/node_modules # 將 node_modules 獨立保存
+      # - ~/.ssh:/root/.ssh:ro
+      # - ${SSH_DIR:-~/.ssh}:/root/.ssh:ro
+      - ${SSH_DIR:?SSH_DIR is not set}:/root/.ssh:ro
+    ports:
+      - "4000:4000"
+      - "4001:4001"
+    stdin_open: true
+    tty: true
+    init: true
+    # command: ["bash", "-c", "tail -f /dev/null"]
+    command: ["bash", "/app/bash/restart.sh"] # 直接啟動 Hexo Server
+    restart: unless-stopped
+volumes:
+  hexo_node_modules:
